@@ -19,9 +19,10 @@ const About: NextPage = () => {
           <section>
             <div className={styles.page__content}>
               <p>
-                Hello! My name is Alexander Rothschild, I'm 30 years old, I live
-                in Copenhagen, Denmark. I have been doing frontend development
-                (professionally) for 8 years now, starting back in 2014.
+                Hello! My name is Alexander Rothschild, I&apos;m 30 years old, I
+                live in Copenhagen, Denmark. I have been doing frontend
+                development (professionally) for 8 years now, starting back in
+                2014.
               </p>
               <p>
                 I initially started playing around with some HTML, CSS and
@@ -35,17 +36,17 @@ const About: NextPage = () => {
               <p>
                 I have worked on many different types of frontend assignments
                 throughout my career, such as browser optimization for Internet
-                Explorer 8, Wordpress, coding newsletters, SPA's (single page
-                applications), unit tests, E2E tests, bugfixing, and working
-                with javascript libraries such as AngularJS, ReactJS. Fetching
-                and sending data to REST api's and more...
+                Explorer 8, Wordpress, coding newsletters, SPA&apos;s (single
+                page applications), unit tests, E2E tests, bugfixing, and
+                working with javascript libraries such as AngularJS, ReactJS.
+                Fetching and sending data to REST api&apos;s and more...
               </p>
               <p>The technologies I like to work with now are mainly:</p>
               <ul>
                 <li>ReactJS</li>
                 <li>TypeScript</li>
                 <li>NextJS</li>
-                <li>RESTFUL api's</li>
+                <li>RESTFUL api&apos;s</li>
                 <li>SCSS</li>
               </ul>
               <p>Other technologies worth mentioning:</p>

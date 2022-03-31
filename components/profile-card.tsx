@@ -34,7 +34,7 @@ const ProfileCard = () => {
           <SkillBar value={60} />
         </li>
         <li>
-          <b>RESTFUL api's</b>
+          <b>RESTFUL api&apos;s</b>
           <SkillBar value={70} />
         </li>
         <li>
