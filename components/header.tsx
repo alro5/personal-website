@@ -8,7 +8,7 @@ function Header() {
     <header className={styles.site__header}>
       <Link href="/">
         <a className={styles.site__header__logo}>
-          <Image width={90} src={logo} />
+          <Image width={90} src={logo} alt="website logo" />
         </a>
       </Link>
       <nav>

@@ -9,16 +9,20 @@
   margin: auto;
   width: 100%;
   &__logo {
+    @include transition(border-color, 300ms, ease);
     display: inline-flex;
     align-items: center;
     justify-content: center;
     background-color: white;
-    color: black;
-    width: var(--size-10);
-    height: var(--size-10);
+    border: 2px solid transparent;
+    width: var(--size-9);
+    height: var(--size-9);
     @include respond-to("small") {
-      width: var(--size-8);
-      height: var(--size-8);
+      width: var(--size-6);
+      height: var(--size-6);
+    }
+    &:hover {
+      border-color: var(--color-darker);
     }
     img {
       width: 90%;

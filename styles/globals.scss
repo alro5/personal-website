@@ -10,7 +10,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: var(--font-family-base);
-  background-color: black;
+  background-color: var(--color-darker);
   color: #fff;
 }
 
@@ -21,7 +21,7 @@ body {
 #app {
   min-height: 100vh;
   border: var(--size-3) solid white;
-  padding: var(--size-5);
+  padding: var(--size-5) var(--size-7);
 
   display: grid;
   grid-template-columns: minmax(0, 1fr);

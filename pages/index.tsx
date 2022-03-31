@@ -6,12 +6,11 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Welcome | Alexander Rothschild</title>
+        <title>Welcome | Alexander Rothschild - Frontend developer</title>
         <meta
           name="description"
-          content="Personal website for frontend developer Alexader Rothschild"
+          content="Welcome to the personal website for frontend developer Alexander Rothschild"
         />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.home}>
         <div className={styles.home__hero}>

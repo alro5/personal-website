@@ -8,8 +8,8 @@ const ProfileCard = () => {
       <figure className={styles.profile__image}>
         <Image
           alt="Picture of Alexander Rothschild"
-          height="250"
-          width="250"
+          height="180"
+          width="180"
           src={profileImage}
         />
       </figure>
@@ -39,6 +39,10 @@ const ProfileCard = () => {
         </li>
         <li>
           <b>SCSS</b>
+          <SkillBar value={100} />
+        </li>
+        <li>
+          <b>HTML</b>
           <SkillBar value={100} />
         </li>
       </ul>
