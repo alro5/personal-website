@@ -1,0 +1,30 @@
+@import "./mixins";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-display);
+}
+
+h1 {
+  font-size: var(--font-size-fluid-3);
+}
+
+p,
+ul,
+ol {
+  font-size: var(--font-size-fluid-1);
+  line-height: var(--font-lineheight-3);
+}
+
+a {
+  @include transition(color, ease, 300ms);
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    color: var(--teal-5);
+  }
+}

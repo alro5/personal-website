@@ -1,0 +1,43 @@
+@mixin transition($prop, $time, $easing: $ease1, $delay: 0s) {
+  $transition: ();
+  @for $i from 1 through length($prop) {
+    @for $j from 0 to (length($prop)) - (length($time)) {
+      $time: join($time, nth($time, -1));
+    }
+    @for $j from 0 to (length($prop)) - (length($easing)) {
+      $easing: join($easing, nth($easing, -1));
+    }
+    @for $j from 0 to (length($prop)) - (length($delay)) {
+      $delay: join($delay, nth($delay, -1));
+    }
+
+    $transition: append(
+      $transition,
+      (nth($prop, $i) nth($time, $i) nth($easing, $i) nth($delay, $i)),
+      $separator: comma
+    );
+  }
+  transition: $transition;
+}
+
+$breakpoints: (
+  "small": 767px,
+  "medium": 992px,
+  "large": 1200px,
+) !default;
+
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}

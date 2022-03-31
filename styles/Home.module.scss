@@ -1,0 +1,27 @@
+@import "./keyframes.scss";
+
+.home {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  &__hero {
+    h1 {
+      display: inline-block;
+      text-align: center;
+      span {
+        display: block;
+        &:first-child {
+          opacity: 0;
+          animation: slideIn 2s forwards;
+          font-size: var(--font-size-9);
+        }
+        &:last-child {
+          opacity: 0;
+          animation: fadeIn 2s forwards 1.5s;
+          font-size: var(--font-size-4);
+        }
+      }
+    }
+  }
+}

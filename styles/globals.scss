@@ -1,0 +1,50 @@
+@import "https://unpkg.com/open-props";
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import "./variables";
+@import "./typography";
+@import "./mixins";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-family-base);
+  background-color: black;
+  color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#app {
+  min-height: 100vh;
+  border: var(--size-3) solid white;
+  padding: var(--size-5);
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+
+  @include respond-to("small") {
+    border-width: var(--size-2);
+  }
+
+  > header {
+    grid-area: header;
+  }
+
+  > main {
+    grid-area: main;
+  }
+
+  > footer {
+    grid-area: footer;
+    text-align: center;
+  }
+}

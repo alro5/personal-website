@@ -1,0 +1,43 @@
+@import "./keyframes.scss";
+@import "./mixins.scss";
+
+.page {
+  $root: &;
+  width: var(--content-max-width);
+  max-width: 100%;
+  padding: var(--size-10) 0;
+  margin: 0 auto;
+  @include respond-to("small") {
+    padding: var(--size-8) 0;
+  }
+  h1 {
+    margin: 0;
+    display: inline-block;
+    &:after {
+      content: "";
+      display: block;
+      height: 4px;
+      width: 0;
+      animation: increaseWidth 1s ease forwards;
+      background-color: currentColor;
+    }
+  }
+  article {
+    #{$root}__content {
+      opacity: 0;
+      animation: fadeIn 1s ease forwards 1s;
+      width: var(--content-max-width-narrow);
+      max-width: 100%;
+    }
+    section {
+      display: grid;
+      align-items: flex-start;
+      gap: var(--size-10);
+      grid-template-columns: minmax(0, 1fr) 340px;
+      @include respond-to("small") {
+        grid-template-columns: minmax(0, 1fr);
+        gap: var(--size-6);
+      }
+    }
+  }
+}
