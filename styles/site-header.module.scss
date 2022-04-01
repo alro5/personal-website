@@ -25,6 +25,9 @@
         border-radius: var(--radius-2);
       }
     }
+    &:after {
+      display: none;
+    }
     img {
       width: 90%;
     }
