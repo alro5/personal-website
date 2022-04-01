@@ -9,6 +9,9 @@
   border: 1px solid var(--color-dark-border);
   opacity: 0;
   animation: fadeIn 1s ease forwards 1s;
+  @include respond-to("small") {
+    padding: var(--size-3);
+  }
   &__image {
     width: 180px;
     height: 180px;
@@ -27,10 +30,10 @@
     }
   }
   p {
-    font-size: var(--font-size-fluid-0);
+    font-size: var(--font-size-2);
   }
   ul {
-    font-size: var(--font-size-fluid-0);
+    font-size: var(--font-size-2);
     text-align: left;
     margin: var(--size-6) 0 0;
     padding: 0;
@@ -51,7 +54,7 @@
           width: 0;
           background-color: var(--teal-5);
           border-radius: var(--radius-1);
-          animation: increaseWidth 1s ease forwards;
+          animation: increaseWidth 1s ease forwards 2s;
         }
       }
     }

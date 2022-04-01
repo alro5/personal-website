@@ -11,16 +11,20 @@ body {
   margin: 0;
   font-family: var(--font-family-base);
   background-color: var(--color-darker);
-  color: #fff;
+  color: var(--color-light);
 }
 
 * {
   box-sizing: border-box;
 }
 
+::selection {
+  background-color: var(--teal-5);
+}
+
 #app {
   min-height: 100vh;
-  border: var(--size-3) solid white;
+  border: var(--size-3) solid var(--color-light);
   padding: var(--size-5) var(--size-7);
 
   display: grid;
@@ -33,6 +37,9 @@ body {
 
   @include respond-to("small") {
     border-width: var(--size-2);
+  }
+  @include respond-to("tiny") {
+    padding: var(--size-3) var(--size-5);
   }
 
   > header {

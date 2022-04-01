@@ -15,22 +15,20 @@ const Contact: NextPage = () => {
       <div className={styles.page}>
         <article>
           <h1>Say hello</h1>
-          <section>
-            <div className={styles.page__content}>
-              <p>You can find me in Copenhagen, Denmark.</p>
-              <p>
-                And digitally here{" "}
-                <a
-                  target="_blank"
-                  rel="noreferrer"
-                  href="https://www.linkedin.com/in/alexander-rothschild-b401bb40/"
-                >
-                  LinkedIn
-                </a>{" "}
-                / <a href="mailto:alek-12@hotmail.com">E-mail</a>.
-              </p>
-            </div>
-          </section>
+          <div className={styles.page__content}>
+            <p>You can find me in Copenhagen, Denmark.</p>
+            <p>
+              And digitally here{" "}
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.linkedin.com/in/alexander-rothschild-b401bb40/"
+              >
+                LinkedIn
+              </a>{" "}
+              / <a href="mailto:alek-12@hotmail.com">E-mail</a>.
+            </p>
+          </div>
         </article>
       </div>
     </>

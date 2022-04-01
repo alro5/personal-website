@@ -23,9 +23,6 @@
       background-color: currentColor;
     }
   }
-  a {
-    color: var(--teal-5);
-  }
   article {
     #{$root}__content {
       opacity: 0;
@@ -43,5 +40,10 @@
         gap: var(--size-6);
       }
     }
+  }
+  .tldr {
+    font-size: var(--font-size-1);
+    font-style: italic;
+    margin-top: var(--size-5);
   }
 }

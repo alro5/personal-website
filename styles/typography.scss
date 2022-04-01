@@ -22,9 +22,37 @@ ol {
 
 a {
   @include transition(color, ease, 300ms);
-  color: inherit;
+  color: var(--teal-5);
   text-decoration: none;
-  &:hover {
-    color: var(--teal-6);
+  display: inline-block;
+  &:after {
+    @include transition(width, 300ms, ease);
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    background-color: currentColor;
+  }
+  @include supports-hover {
+    &:hover {
+      color: var(--teal-7);
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+ul {
+  list-style: none;
+  li {
+    &:before {
+      content: "\2022";
+      color: var(--teal-5);
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
   }
 }

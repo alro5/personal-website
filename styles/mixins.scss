@@ -21,6 +21,7 @@
 }
 
 $breakpoints: (
+  "tiny": 520px,
   "small": 767px,
   "medium": 992px,
   "large": 1200px,
@@ -39,5 +40,11 @@ $breakpoints: (
   @else {
     @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
         + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+@mixin supports-hover() {
+  @media (hover: hover) {
+    @content;
   }
 }
